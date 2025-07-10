@@ -8,9 +8,10 @@ import java.util.stream.IntStream;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import base.BaseTest;
 import pages.HotelsPage;
 
-public class HotelsPageTest {
+public class HotelsPageTest extends BaseTest{
 	HotelsPage hotelObj;
 	@Test
 	public void TC_HB_01() {
