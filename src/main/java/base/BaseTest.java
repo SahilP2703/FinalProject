@@ -10,8 +10,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
-import com.beust.jcommander.Parameter;
-
 import pages.CabBookingPage;
 
 public class BaseTest {
