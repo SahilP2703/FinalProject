@@ -20,7 +20,7 @@ public class BaseTest {
 	public static WebDriverWait wait;
 	public static JavascriptExecutor js;
 	public static CabBookingPage cabBookingPage;
-	
+	// created branch
 	@BeforeClass
 	public void DriverSetup() {
 		driver = WebDriverSetUp.setupDriver("chrome");
