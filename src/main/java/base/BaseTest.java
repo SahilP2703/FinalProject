@@ -5,8 +5,6 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
@@ -18,15 +16,15 @@ public class BaseTest {
 	public static WebDriverWait wait;
 	public static JavascriptExecutor js;
 	public static CabBookingPage cabBookingPage;
-	// created branch
+	
 	@BeforeClass
 	public void DriverSetup() {
 		driver = WebDriverSetUp.setupDriver("chrome");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        js = (JavascriptExecutor) driver;
-        cabBookingPage = new CabBookingPage(driver);
+//        js = (JavascriptExecutor) driver;
+//        cabBookingPage = new CabBookingPage(driver);
 	}
 
 	@BeforeMethod
