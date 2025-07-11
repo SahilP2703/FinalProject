@@ -5,8 +5,9 @@
     <classes>
       <class name="testCases.CabBookingPageTest">
         <methods>
+          <include name="tearDown"/>
+          <include name="verifyPickUpDateInResults"/>
           <include name="DriverSetup"/>
-          <include name="oneWayCabSearch" invocation-numbers="0"/>
           <include name="goToHomePage"/>
         </methods>
       </class> <!-- testCases.CabBookingPageTest -->
