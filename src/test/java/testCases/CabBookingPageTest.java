@@ -18,8 +18,6 @@ import pages.CabBookingPage;
 
 public class CabBookingPageTest extends BaseTest{
 	
-	public CabBookingPage cabBookingPage = new CabBookingPage(driver);
-	
 	@DataProvider(name = "testData")
 	public String[][] loginData(){
 		String[][] arr = {{"Cabs", "Outstation One-Way", "Delhi", "Manali, Himachal Pradesh", "Dec 09 2025", "12 40 PM", "SUV"}};

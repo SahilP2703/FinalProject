@@ -23,8 +23,8 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-//        js = (JavascriptExecutor) driver;
-//        cabBookingPage = new CabBookingPage(driver);
+        js = (JavascriptExecutor) driver;
+        cabBookingPage = new CabBookingPage(driver);
 	}
 
 	@BeforeMethod
@@ -40,7 +40,7 @@ public class BaseTest {
         else {
             System.out.println("Remarks: Successfully navigated to "+ baseUrl);        	
         }
-//        driver.findElement(By.xpath("//span[@data-cy='closeModal']")).click(); // Close popup
+        driver.findElement(By.xpath("//span[@data-cy='closeModal']")).click(); // Close popup
 	}
 	
 	@AfterClass
