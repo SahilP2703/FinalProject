@@ -22,7 +22,7 @@ public class CabBookingPageTest extends BaseTest{
 	
 	@DataProvider(name = "testData")
 	public String[][] loginData(){
-		String[][] arr = {{"Cabs", "Outstation One-Way", "Delhi", "Manali, Himachal Pradesh", "Dec 09 2025", "12 40 PM", "SUV"}};
+		String[][] arr = {{"Cabs", "Outstation One-Way", "Delhi", "Manali, Himachal Pradesh", "Dec 09 2025", "12:40 PM", "SUV"}};
 		return arr;
 	}
 	
@@ -188,10 +188,10 @@ public class CabBookingPageTest extends BaseTest{
         cabBookingPage.search();
         cabBookingPage.closePackagesPopup();
         
-        String expectedFromLocation = fromLocation;
-        String actualFromLocation = driver.findElement(By.id("pickup_time")).getAttribute("value");
-    	System.out.println(expectedFromLocation +" - "+actualFromLocation);
-    	Assert.assertEquals(expectedFromLocation, actualFromLocation);
+        String expectedPickUpTime = time;
+        String actualPickUpTime = driver.findElement(By.id("pickup_time")).getAttribute("value");
+    	System.out.println(expectedPickUpTime +" - "+actualPickUpTime);
+    	Assert.assertEquals(expectedPickUpTime, actualPickUpTime);
 	}
 
 	@Test(dataProvider = "testData")

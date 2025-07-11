@@ -43,8 +43,8 @@ public class BaseTest {
         driver.findElement(By.xpath("//span[@data-cy='closeModal']")).click(); // Close popup
 	}
 	
-	@AfterClass
-	public void tearDown() {
-		driver.quit();
-	}
+//	@AfterClass
+//	public void tearDown() {
+//		driver.quit();
+//	}
 }

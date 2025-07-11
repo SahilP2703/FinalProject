@@ -11,10 +11,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import base.BaseTest;
+import utils.Methods;
  
-public class CabBookingPage {
+public class CabBookingPage extends BaseTest {
 	WebDriver driver;
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	
 	public CabBookingPage(WebDriver driver) {
 		this.driver = driver;
@@ -25,7 +27,7 @@ public class CabBookingPage {
 	
 	//Button to disable the Login pop-up
 	@FindBy(xpath="//span[@class='commonModal__close']") WebElement closePopUpBtn;
-	@FindBy(xpath="//span[text()='Cabs']") WebElement cabsSection;
+	@FindBy(xpath="//a[contains(@href,'/cabs/')]") WebElement cabsSection;
 	@FindBy(xpath="//li[text()='Outstation One-Way']") WebElement tripTypeButton;
 	@FindBy(xpath="//label[@for='fromCity']") WebElement fromCityField;
 	@FindBy(xpath="//span[text()='Delhi']") WebElement fromCitySuggestion;
@@ -46,10 +48,11 @@ public class CabBookingPage {
 	/* Action methods */
 	
 	public void disableLoginPopUp() {
-		closePopUpBtn.click();
+		Methods.scrollClick(closePopUpBtn);
 	}
 
 	public void selectSection(String section) {
+		System.out.println(cabsSection.isDisplayed());
 		cabsSection.click();		
 	}
 	

@@ -45,6 +45,7 @@ public class Methods extends BaseTest{
     }
 
     public static void timePicker(String timeString){
+    	timeString = timeString.replace(":", " ");
         String time [] = timeString.split(" ");
         int hr = Integer.parseInt(time[0]);
         int min = Integer.parseInt(time[1]);
