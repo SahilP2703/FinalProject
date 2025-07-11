@@ -11,11 +11,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import base.BaseTest;
  
-public class CabBookingPage {
+public class CabBookingPage extends BaseTest {
 	WebDriver driver;
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-	
 	public CabBookingPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
