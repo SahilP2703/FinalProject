@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-11T15:29:25 IST" name="Default suite" finished-at="2025-07-11T15:30:08 IST" duration-ms="42615">
+  <suite started-at="2025-07-11T16:05:31 IST" name="Default suite" finished-at="2025-07-11T16:06:05 IST" duration-ms="33968">
     <groups>
     </groups>
-    <test started-at="2025-07-11T15:29:25 IST" name="Default test" finished-at="2025-07-11T15:30:08 IST" duration-ms="42615">
+    <test started-at="2025-07-11T16:05:31 IST" name="Default test" finished-at="2025-07-11T16:06:05 IST" duration-ms="33968">
       <class name="testCases.CabBookingPageTest">
-        <test-method is-config="true" signature="DriverSetup()[pri:0, instance:testCases.CabBookingPageTest@477b4cdf]" started-at="2025-07-11T15:29:25 IST" name="DriverSetup" finished-at="2025-07-11T15:29:33 IST" duration-ms="7732" status="PASS">
+        <test-method is-config="true" signature="DriverSetup()[pri:0, instance:testCases.CabBookingPageTest@477b4cdf]" started-at="2025-07-11T16:05:31 IST" name="DriverSetup" finished-at="2025-07-11T16:05:39 IST" duration-ms="7884" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverSetup -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@477b4cdf]" started-at="2025-07-11T15:29:33 IST" name="goToHomePage" finished-at="2025-07-11T15:29:40 IST" duration-ms="7003" status="PASS">
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@477b4cdf]" started-at="2025-07-11T16:05:39 IST" name="goToHomePage" finished-at="2025-07-11T16:05:45 IST" duration-ms="6445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="verifyFromLocationInResults(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.CabBookingPageTest@477b4cdf]" started-at="2025-07-11T15:29:40 IST" name="verifyFromLocationInResults" data-provider="testData" finished-at="2025-07-11T15:30:02 IST" duration-ms="22354" status="PASS">
+        <test-method signature="verifyFromLocationInResults(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.CabBookingPageTest@477b4cdf]" started-at="2025-07-11T16:05:46 IST" name="verifyFromLocationInResults" data-provider="testData" finished-at="2025-07-11T16:05:59 IST" duration-ms="13930" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -56,7 +56,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFromLocationInResults -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.CabBookingPageTest@477b4cdf]" started-at="2025-07-11T15:30:02 IST" name="tearDown" finished-at="2025-07-11T15:30:08 IST" duration-ms="5410" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.CabBookingPageTest@477b4cdf]" started-at="2025-07-11T16:05:59 IST" name="tearDown" finished-at="2025-07-11T16:06:05 IST" duration-ms="5601" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

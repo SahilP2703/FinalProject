@@ -62,7 +62,7 @@ public class CabBookingPageTest extends BaseTest{
         
         String expectedFromLocation = fromLocation;
         String actualFromLocation = driver.findElement(By.id("from_location")).getAttribute("value");
-    	System.out.println(expectedFromLocation +" - "+actualFromLocation +" - "+ expectedFromLocation == actualFromLocation);
+    	System.out.println(expectedFromLocation +" - "+actualFromLocation);
     	Assert.assertTrue(actualFromLocation.contains(expectedFromLocation));
 	}
 

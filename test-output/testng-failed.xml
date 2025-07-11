@@ -5,8 +5,8 @@
     <classes>
       <class name="testCases.CabBookingPageTest">
         <methods>
+          <include name="verifyToLocationInResults" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="verifyPickUpDateInResults"/>
           <include name="DriverSetup"/>
           <include name="goToHomePage"/>
         </methods>
