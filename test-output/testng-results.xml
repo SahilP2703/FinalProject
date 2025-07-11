@@ -1,61 +1,786 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="0" failed="9" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-11T10:37:17 IST" name="Default suite" finished-at="2025-07-11T10:37:52 IST" duration-ms="34758">
+  <suite started-at="2025-07-11T16:22:21 IST" name="Default suite" finished-at="2025-07-11T16:22:45 IST" duration-ms="24506">
     <groups>
     </groups>
-    <test started-at="2025-07-11T10:37:17 IST" name="Default test" finished-at="2025-07-11T10:37:52 IST" duration-ms="34758">
-      <class name="testCases.HotelsPageTest">
-        <test-method is-config="true" signature="DriverSetup()[pri:0, instance:testCases.HotelsPageTest@6a6cb05c]" started-at="2025-07-11T10:37:17 IST" name="DriverSetup" finished-at="2025-07-11T10:37:31 IST" duration-ms="13733" status="PASS">
+    <test started-at="2025-07-11T16:22:21 IST" name="Default test" finished-at="2025-07-11T16:22:45 IST" duration-ms="24506">
+      <class name="testCases.CabBookingPageTest">
+        <test-method is-config="true" signature="DriverSetup()[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:21 IST" name="DriverSetup" finished-at="2025-07-11T16:22:26 IST" duration-ms="5587" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverSetup -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelsPageTest@6a6cb05c]" started-at="2025-07-11T10:37:31 IST" name="goToHomePage" finished-at="2025-07-11T10:37:33 IST" duration-ms="2110" status="PASS">
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:26 IST" name="goToHomePage" finished-at="2025-07-11T16:22:29 IST" duration-ms="3124" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_HB_01()[pri:0, instance:testCases.HotelsPageTest@6a6cb05c]" started-at="2025-07-11T10:37:33 IST" name="TC_HB_01" finished-at="2025-07-11T10:37:37 IST" duration-ms="3393" status="PASS">
+        <test-method signature="oneWayCabSearch(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:29 IST" name="oneWayCabSearch" data-provider="testData" finished-at="2025-07-11T16:22:29 IST" duration-ms="19" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cabs]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Outstation One-Way]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Dec 09 2025]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12 40 PM]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pages.CabBookingPage.selectSection(CabBookingPage.java:53)
+at testCases.CabBookingPageTest.oneWayCabSearch(CabBookingPageTest.java:31)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_HB_01 -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelsPageTest@6a6cb05c]" started-at="2025-07-11T10:37:37 IST" name="goToHomePage" finished-at="2025-07-11T10:37:38 IST" duration-ms="1213" status="PASS">
+        </test-method> <!-- oneWayCabSearch -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:29 IST" name="goToHomePage" finished-at="2025-07-11T16:22:31 IST" duration-ms="1825" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_HB_02()[pri:0, instance:testCases.HotelsPageTest@6a6cb05c]" started-at="2025-07-11T10:37:38 IST" name="TC_HB_02" finished-at="2025-07-11T10:37:42 IST" duration-ms="4567" status="PASS">
+        <test-method signature="verifyCabTypeInResult(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:31 IST" name="verifyCabTypeInResult" data-provider="testData" finished-at="2025-07-11T16:22:31 IST" duration-ms="2" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cabs]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Outstation One-Way]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Dec 09 2025]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12 40 PM]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pages.CabBookingPage.selectSection(CabBookingPage.java:53)
+at testCases.CabBookingPageTest.verifyCabTypeInResult(CabBookingPageTest.java:77)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_HB_02 -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelsPageTest@6a6cb05c]" started-at="2025-07-11T10:37:42 IST" name="goToHomePage" finished-at="2025-07-11T10:37:43 IST" duration-ms="945" status="PASS">
+        </test-method> <!-- verifyCabTypeInResult -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:31 IST" name="goToHomePage" finished-at="2025-07-11T16:22:33 IST" duration-ms="1567" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_HB_03()[pri:0, instance:testCases.HotelsPageTest@6a6cb05c]" started-at="2025-07-11T10:37:43 IST" name="TC_HB_03" finished-at="2025-07-11T10:37:44 IST" duration-ms="952" status="PASS">
+        <test-method signature="verifyClearAllFilterFunctionality(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:33 IST" name="verifyClearAllFilterFunctionality" data-provider="testData" finished-at="2025-07-11T16:22:33 IST" duration-ms="2" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cabs]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Outstation One-Way]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Dec 09 2025]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12 40 PM]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pages.CabBookingPage.selectSection(CabBookingPage.java:53)
+at testCases.CabBookingPageTest.verifyClearAllFilterFunctionality(CabBookingPageTest.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_HB_03 -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelsPageTest@6a6cb05c]" started-at="2025-07-11T10:37:44 IST" name="goToHomePage" finished-at="2025-07-11T10:37:45 IST" duration-ms="1099" status="PASS">
+        </test-method> <!-- verifyClearAllFilterFunctionality -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:33 IST" name="goToHomePage" finished-at="2025-07-11T16:22:34 IST" duration-ms="1297" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_HB_04()[pri:0, instance:testCases.HotelsPageTest@6a6cb05c]" started-at="2025-07-11T10:37:45 IST" name="TC_HB_04" finished-at="2025-07-11T10:37:46 IST" duration-ms="831" status="PASS">
+        <test-method signature="verifyFromLocationInResults(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:34 IST" name="verifyFromLocationInResults" data-provider="testData" finished-at="2025-07-11T16:22:34 IST" duration-ms="2" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cabs]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Outstation One-Way]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Dec 09 2025]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12 40 PM]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pages.CabBookingPage.selectSection(CabBookingPage.java:53)
+at testCases.CabBookingPageTest.verifyFromLocationInResults(CabBookingPageTest.java:104)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_HB_04 -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelsPageTest@6a6cb05c]" started-at="2025-07-11T10:37:46 IST" name="goToHomePage" finished-at="2025-07-11T10:37:47 IST" duration-ms="969" status="PASS">
+        </test-method> <!-- verifyFromLocationInResults -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:34 IST" name="goToHomePage" finished-at="2025-07-11T16:22:36 IST" duration-ms="1525" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_HB_05()[pri:0, instance:testCases.HotelsPageTest@6a6cb05c]" started-at="2025-07-11T10:37:47 IST" name="TC_HB_05" finished-at="2025-07-11T10:37:48 IST" duration-ms="1168" status="PASS">
+        <test-method signature="verifyPickUpDateInResults(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:36 IST" name="verifyPickUpDateInResults" data-provider="testData" finished-at="2025-07-11T16:22:36 IST" duration-ms="2" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cabs]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Outstation One-Way]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Dec 09 2025]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12 40 PM]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pages.CabBookingPage.selectSection(CabBookingPage.java:53)
+at testCases.CabBookingPageTest.verifyPickUpDateInResults(CabBookingPageTest.java:148)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_HB_05 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HotelsPageTest@6a6cb05c]" started-at="2025-07-11T10:37:48 IST" name="tearDown" finished-at="2025-07-11T10:37:52 IST" duration-ms="3723" status="PASS">
+        </test-method> <!-- verifyPickUpDateInResults -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:36 IST" name="goToHomePage" finished-at="2025-07-11T16:22:37 IST" duration-ms="1342" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="verifyPickUpTimeInResults(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:37 IST" name="verifyPickUpTimeInResults" data-provider="testData" finished-at="2025-07-11T16:22:37 IST" duration-ms="2" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cabs]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Outstation One-Way]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Dec 09 2025]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12 40 PM]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pages.CabBookingPage.selectSection(CabBookingPage.java:53)
+at testCases.CabBookingPageTest.verifyPickUpTimeInResults(CabBookingPageTest.java:177)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPickUpTimeInResults -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:37 IST" name="goToHomePage" finished-at="2025-07-11T16:22:38 IST" duration-ms="1332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="verifyToLocationInResults(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:38 IST" name="verifyToLocationInResults" data-provider="testData" finished-at="2025-07-11T16:22:38 IST" duration-ms="2" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cabs]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Outstation One-Way]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Dec 09 2025]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12 40 PM]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pages.CabBookingPage.selectSection(CabBookingPage.java:53)
+at testCases.CabBookingPageTest.verifyToLocationInResults(CabBookingPageTest.java:126)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyToLocationInResults -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:38 IST" name="goToHomePage" finished-at="2025-07-11T16:22:40 IST" duration-ms="1687" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="y(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:40 IST" name="y" data-provider="testData" finished-at="2025-07-11T16:22:40 IST" duration-ms="10" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cabs]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Outstation One-Way]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Dec 09 2025]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12 40 PM]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pages.CabBookingPage.selectSection(CabBookingPage.java:53)
+at testCases.CabBookingPageTest.y(CabBookingPageTest.java:199)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- y -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:40 IST" name="goToHomePage" finished-at="2025-07-11T16:22:41 IST" duration-ms="1354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="z(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:41 IST" name="z" data-provider="testData" finished-at="2025-07-11T16:22:41 IST" duration-ms="5" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cabs]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Outstation One-Way]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Dec 09 2025]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12 40 PM]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pages.CabBookingPage.selectSection(CabBookingPage.java:53)
+at testCases.CabBookingPageTest.z(CabBookingPageTest.java:221)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- z -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.CabBookingPageTest@6f27a732]" started-at="2025-07-11T16:22:41 IST" name="tearDown" finished-at="2025-07-11T16:22:45 IST" duration-ms="3703" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.HotelsPageTest -->
+      </class> <!-- testCases.CabBookingPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

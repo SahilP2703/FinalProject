@@ -3,14 +3,22 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.HotelsPageTest">
+      <class name="testCases.CabBookingPageTest">
         <methods>
+          <include name="verifyToLocationInResults" invocation-numbers="0"/>
           <include name="tearDown"/>
+          <include name="verifyPickUpDateInResults" invocation-numbers="0"/>
           <include name="DriverSetup"/>
-          <include name="TC_HB_01"/>
+          <include name="y" invocation-numbers="0"/>
+          <include name="z" invocation-numbers="0"/>
+          <include name="verifyClearAllFilterFunctionality" invocation-numbers="0"/>
+          <include name="verifyCabTypeInResult" invocation-numbers="0"/>
+          <include name="oneWayCabSearch" invocation-numbers="0"/>
+          <include name="verifyPickUpTimeInResults" invocation-numbers="0"/>
           <include name="goToHomePage"/>
+          <include name="verifyFromLocationInResults" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testCases.HotelsPageTest -->
+      </class> <!-- testCases.CabBookingPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
