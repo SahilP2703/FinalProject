@@ -30,10 +30,12 @@ public class CabBookingPage extends BaseTest {
 	@FindBy(xpath="//a[contains(@href,'/cabs/')]") WebElement cabsSection;
 	@FindBy(xpath="//li[text()='Outstation One-Way']") WebElement tripTypeButton;
 	@FindBy(xpath="//label[@for='fromCity']") WebElement fromCityField;
-	@FindBy(xpath="//span[text()='Delhi']") WebElement fromCitySuggestion;
+	@FindBy(xpath="//input[@placeholder='From']") WebElement fromLocationInput;
+	@FindBy(xpath="//ul[@role='listbox']/li[@role='option']") List<WebElement> suggestions;
+	@FindBy(xpath="//ul[@role='listbox']/li[@role='option']") WebElement suggestion;
+//	@FindBy(xpath="//span[text()='Delhi']") WebElement fromCitySuggestion;
 	@FindBy(xpath="//label[@for='toCity']") WebElement toCityField;
-	@FindBy(xpath="//div[@role='combobox']/input") WebElement destinationInput;
-	@FindBy(xpath="//li[@role='option']") WebElement toplaceSuggestion;
+	@FindBy(xpath="//input[@placeholder='To']") WebElement toLocationInput;
 	@FindBy(xpath="//label[@for='departure']") WebElement departureDateField;
 	@FindBy(xpath="//label[@for='pickupTime']") WebElement pickUpTimeField;
 	@FindBy(xpath="//p[contains(@data-cy, 'Search')]/a") WebElement searchButton;
@@ -63,9 +65,26 @@ public class CabBookingPage extends BaseTest {
 	public void clickFromField() {
         fromCityField.click();
 	}
+
+	public void enterFromCity(String destination) {
+		fromLocationInput.sendKeys(destination);
+	}
 	
-	public void selectCityFromSuggestion(String city) {
-        fromCitySuggestion.click();
+	public String getSuggestion() {
+		return suggestion.getText();
+	}
+	
+	public void selectLocationFromSuggestions(String location) {
+		if(location.equals("1")) {
+			suggestions.get(0).click();		
+			return;
+		}
+		for(WebElement ele : suggestions) {
+			if(ele.getText().contains(location)) {
+				ele.click();
+				return;
+			}
+		}
 	}
 	
 	public void clickToField() {
@@ -75,11 +94,11 @@ public class CabBookingPage extends BaseTest {
         }
 	}
 	
-	public void enterDestination(String destination) {
-		destinationInput.sendKeys(destination);
+	public void enterToLocation(String destination) {
+		toLocationInput.sendKeys(destination);
 	}
 	
-	public void selectDestinationFromSuggestion(String destination) {	
+	public void selectDestinationFromSuggestion(String destination) {
         By manaliSuggestionLocator = By.xpath("//li[@role='option']"); //locator for 1st suggestion
         // 1. Wait until the element with the specified locator contains the desired text
         wait.until(ExpectedConditions.textToBePresentInElementLocated(manaliSuggestionLocator, destination));
